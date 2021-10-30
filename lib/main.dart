@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pineapple_flutter/pages/home_page.dart';
 import 'package:pineapple_flutter/pages/login_page.dart';
 
@@ -12,26 +13,21 @@ class myApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       //home: HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-            primaryColor: Colors.pink
-      ),
-      darkTheme: ThemeData(
-                brightness: Brightness.dark,
-                primaryColor: Colors.black26
-      ),
-      initialRoute: "/home",
+          primarySwatch: Colors.deepOrange,
+          fontFamily: GoogleFonts.lato().fontFamily),
+
+      darkTheme:
+          ThemeData(brightness: Brightness.dark, primaryColor: Colors.black26),
+      // initialRoute: "/home",
       routes: {
-        "/" : (context) => LoginPage(),
-        "/home" : (context) => HomePage(),
-        "/login" :(context) => LoginPage(),
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
       },
     );
   }
-
 }
-
