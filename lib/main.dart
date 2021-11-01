@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pineapple_flutter/pages/home_page.dart';
 import 'package:pineapple_flutter/pages/login_page.dart';
 import 'package:pineapple_flutter/utils/routes.dart';
+import 'package:pineapple_flutter/widgets/themes.dart';
 
 void main() {
   runApp(myApp());
@@ -18,12 +19,9 @@ class myApp extends StatelessWidget {
       //home: HomePage(),
       themeMode: ThemeMode.light,
       //  debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          primarySwatch: Colors.deepOrange,
-          fontFamily: GoogleFonts.lato().fontFamily),
+      theme: MyTheme.lightTheme(context),
 
-      darkTheme:
-          ThemeData(brightness: Brightness.dark, primaryColor: Colors.black26),
+      darkTheme: MyTheme.darkTheme,
       initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
