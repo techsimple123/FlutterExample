@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pineapple_flutter/widgets/MyDrawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,7 +18,14 @@ class HomePage extends StatelessWidget {
           child: Text('Hello cool ${days} flutter $name'),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
+      // Theme(
+      //   data: Theme.of(context).copyWith(
+      //     // Set the transparency here
+      //     canvasColor: Colors.transparent,
+      //   ),
+      //   child: MyDrawer(),
+      // ),
     );
   }
 }
